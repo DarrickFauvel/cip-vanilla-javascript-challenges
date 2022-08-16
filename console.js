@@ -1,67 +1,77 @@
 // BEGINNER CHALLENGES (unless otherwise stated, use the names array in all challenge points)
-const names = ["Derek", "Joe", "Anna", "Coen", "Chris", "Macey", "Ella"];
+const names = ['Derek', 'Joe', 'Anna', 'Coen', 'Chris', 'Macey', 'Ella']
 
 // 1. Add a name to the beginning of the names array
+names.unshift('GMO')
 
 // 2. Add a name to the end of the names array
+names.push('Mu')
 
 // 3. Remove the name you added to the beginning of the names array
+names.shift()
 
 // 4. Remove the name you added to the end of the names array (return the name to an original)
+names.pop()
 
 // 5. Create a new array called "lowercasedNames" with each name lowercased
+const lowercasedNames = []
 
 // 6. Sort the names array alphabetically
+// names.sort()
 
 // 7. Find the index of "Chris"
+console.log(names.indexOf('Chris'))
 
 // 8. Create a new array called "afterChris" with all names after "Chris" in the names array
+const afterChris = names.slice(1)
 
 // 9. Alter the original array to only contain the names before "Chris"
+names.splice(4)
 
 // 10. Return "true" if the names array contains "Chris" and "false" if it does not (hint: it should be false now)
+console.log(names.includes('Chris'))
 
-console.log(names);
+console.table(names)
 
 // INTERMEDIATE CHALLENGES (unless otherwise stated, use the peeps array in all challenge points)
 const peeps = [
   {
     id: 1,
-    name: "Chris",
+    name: 'Chris',
     age: 24,
-    favoriteNumbers: [1, 4, 8, 12, 32],
+    favoriteNumbers: [1, 4, 8, 12, 32]
   },
   {
     id: 2,
-    name: "Terrance",
+    name: 'Terrance',
     age: 37,
-    favoriteNumbers: [2, 8, 9],
+    favoriteNumbers: [2, 8, 9]
   },
   {
     id: 3,
-    name: "Megan",
+    name: 'Megan',
     age: 22,
-    favoriteNumbers: [23, 14],
+    favoriteNumbers: [23, 14]
   },
   {
     id: 4,
-    name: "Juan",
+    name: 'Juan',
     age: 18,
-    favoriteNumbers: [23, 14, 2],
+    favoriteNumbers: [23, 14, 2]
   },
   {
     id: 5,
-    name: "Tina",
+    name: 'Tina',
     age: 42,
-    favoriteNumbers: [12, 9, 1, 4, 18],
+    favoriteNumbers: [12, 9, 1, 4, 18]
   },
   {
     id: 6,
-    name: "Lin",
+    name: 'Lin',
     age: 24,
-    favoriteNumbers: [3, 9],
-  },
-];
+    favoriteNumbers: [3, 9]
+  }
+]
 
 // 1. Add a boolean property "isAwesome" for each peep and set it to "true" if the person has at least 3 favorite numbers (or false if not).
 
@@ -83,4 +93,4 @@ const peeps = [
 
 // 10. Return a single value representing the total of all favoriteNumbers for anyone with the isAwesome property set to "true" (HINT: should be 159).
 
-console.table(peeps);
+// console.table(peeps)
