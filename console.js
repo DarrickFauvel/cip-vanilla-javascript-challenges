@@ -95,10 +95,9 @@ peeps.forEach((peep) => peep.favoriteNumbers.sort((a, b) => a - b))
 // findPeep(8)
 
 // 6. Create a new array called "reversedPeeps" with the peeps array order reversed
-const reversedPeeps = Array.from(peeps)
-reversedPeeps.reverse()
-console.table(peeps)
-console.table(reversedPeeps)
+// const reversedPeeps = Array.from(peeps).reverse()
+// console.table(peeps)
+// console.table(reversedPeeps)
 
 // 7. Add an additional property on each peep object called favoriteNumbersSum with a single number value which equals the total of all their favorite numbers.
 
