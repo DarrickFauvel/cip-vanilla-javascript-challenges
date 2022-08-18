@@ -100,6 +100,9 @@ peeps.forEach((peep) => peep.favoriteNumbers.sort((a, b) => a - b))
 // console.table(reversedPeeps)
 
 // 7. Add an additional property on each peep object called favoriteNumbersSum with a single number value which equals the total of all their favorite numbers.
+peeps.forEach((peep) => {
+  peep.favoriteNumbersSum = peep.favoriteNumbers.reduce((a, b) => a + b)
+})
 
 // 8. Create a new array called "numberOnePeeps" with all people that include a favorite number of "1". Include only their names and ids in the new array.
 
@@ -107,4 +110,4 @@ peeps.forEach((peep) => peep.favoriteNumbers.sort((a, b) => a - b))
 
 // 10. Return a single value representing the total of all favoriteNumbers for anyone with the isAwesome property set to "true" (HINT: should be 159).
 
-// console.table(peeps)
+console.table(peeps)
