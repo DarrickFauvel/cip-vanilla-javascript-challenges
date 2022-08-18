@@ -20,7 +20,7 @@ const lowercasedNames = []
 // names.sort()
 
 // 7. Find the index of "Chris"
-console.log(names.indexOf('Chris'))
+// console.log(names.indexOf('Chris'))
 
 // 8. Create a new array called "afterChris" with all names after "Chris" in the names array
 const afterChris = names.slice(1)
@@ -29,9 +29,9 @@ const afterChris = names.slice(1)
 names.splice(4)
 
 // 10. Return "true" if the names array contains "Chris" and "false" if it does not (hint: it should be false now)
-console.log(names.includes('Chris'))
+// console.log(names.includes('Chris'))
 
-console.table(names)
+// console.table(names)
 
 // INTERMEDIATE CHALLENGES (unless otherwise stated, use the peeps array in all challenge points)
 const peeps = [
@@ -74,16 +74,31 @@ const peeps = [
 ]
 
 // 1. Add a boolean property "isAwesome" for each peep and set it to "true" if the person has at least 3 favorite numbers (or false if not).
+peeps.forEach((peep) => (peep.isAwesome = peep.favoriteNumbers.length >= 3))
 
 // 2. Return a new array called "youngPeeps" with peeps 25 or younger.
+const youngPeeps = peeps.filter((peep) => peep.age <= 25)
 
 // 3. Sort the favoriteNumbers property from least to greatest for each peep in the peeps array
+peeps.forEach((peep) => peep.favoriteNumbers.sort((a, b) => a - b))
 
 // 4. Return "true" if every person has an age below 50 and "false" if not.
+// console.log(peeps.every((peep) => peep.age < 50))
 
 // 5. Create a function called "findPeep" that returns the peep for an ID passed in and returns "not found" if the peep does not exist. Call it for an id that exists and one that does not.
+// const findPeep = (id) => {
+//   const result = peeps.find((peep) => peep.id === id) || 'not found'
+//   console.log(result)
+// }
+
+// findPeep(1)
+// findPeep(8)
 
 // 6. Create a new array called "reversedPeeps" with the peeps array order reversed
+const reversedPeeps = Array.from(peeps)
+reversedPeeps.reverse()
+console.table(peeps)
+console.table(reversedPeeps)
 
 // 7. Add an additional property on each peep object called favoriteNumbersSum with a single number value which equals the total of all their favorite numbers.
 
